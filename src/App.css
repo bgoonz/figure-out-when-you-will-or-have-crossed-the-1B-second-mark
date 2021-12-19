@@ -1,0 +1,84 @@
+
+.app {
+  display: flex;
+  flex-direction: column;
+  /* TODO: Fix this width thing.
+    The "save" button sticks out to the right if I uncomment it. */
+  /* width: 100%; */
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.page-header {
+  font-size: 20px;
+  color: #966147;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+/* ---- DobForm ---- */
+
+form.dob-form {
+  display: flex;
+  flex-direction: column;
+}
+form.dob-form.hidden {
+  display: none;
+}
+
+form.dob-form .form-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+form.dob-form .form-row > * {
+  margin-right: 10px;
+}
+form.dob-form .form-row > *:last-child {
+  margin-right: 0;
+}
+
+form.dob-form .form-row.save-button {
+  justify-content: flex-end;
+}
+
+form.dob-form select:required:invalid,
+form.dob-form input:required:invalid {
+  color: #aaa;
+}
+form.dob-form select option {
+  color: black;
+}
+form.dob-form select option[value=""][disabled] {
+  display: none;
+}
+
+.dob-form .tz-editor-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  border-top: 1px solid #aaa;
+  padding-top: 25px;
+}
+.dob-form .tz-editor-row .tz-label {
+  margin-right: 5px;
+}
+.dob-form .tz-editor-row .tz-select-opener {
+  margin-left: 10px;
+  color: #9d916a;
+  text-decoration: underline;
+}
+.dob-form .tz-editor-row .tz-select-opener:hover {
+  cursor: pointer;
+  color: #60532c;
+}
+
+/* ---- CalculatedInfo ---- */
+
+.calculated-info-row + .calculated-info-row {
+  margin-top: 15px;
+}
